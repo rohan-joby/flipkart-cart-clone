@@ -69,7 +69,7 @@ const CartRow = ({ item }) => {
             className={classes[`btn-sec`]}
             onClick={() => {
               addToSave(item);
-              removeFromCart(item.id);
+              clearCartItem(item.id);
             }}
           >
             Save for later
