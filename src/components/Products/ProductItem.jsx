@@ -39,7 +39,6 @@ const ProductItem = ({ data }) => {
   const goToCartHandler = () => {
     navigate("/cart");
   };
-  console.log(cartItems);
   return (
     <div className={classes.wrapper}>
       <img src={data.image} alt="placeholder" height="275" width="250" />

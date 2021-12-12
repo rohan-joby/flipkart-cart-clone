@@ -16,7 +16,6 @@ const CartActions = () => {
     const current = curr.slice(1);
     return acc + parseFloat(current);
   }, 0);
-  console.log(cartTotalAmount);
 
   const formattedSubTotal = formatPrice(cartTotalAmount);
   const total = Number(cartTotalAmount - realDiscount);

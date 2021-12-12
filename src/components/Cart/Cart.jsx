@@ -11,7 +11,6 @@ const Cart = () => {
   const { cartItems, clearCart } = useCart();
   const items = cartItems.map((item) => <CartRow item={item} key={item.id} />);
 
-  console.log(items);
   if (cartItems.length === 0) {
     return (
       <>
