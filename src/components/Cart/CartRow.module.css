@@ -1,0 +1,155 @@
+.table-row {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  padding: 1.2em 2em 0.75em 2em;
+  margin: 1rem 0;
+  box-shadow: 0 0 8px hsl(0, 0%, 70%);
+}
+.thumbnail {
+  padding-top: 10px;
+  object-fit: contain;
+}
+.details{
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+.details h2,
+.details h3 {
+  padding: 0;
+  text-transform: capitalize;
+}
+.details h2 {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.details h3 {
+  color: hsl(0, 3%, 55%);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.subtotal h2 {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  margin-top: 0;
+}
+.count {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+.count button,
+.count h3 {
+  padding: 0.2em 0.65em;
+  font-size: 1.1rem;
+}
+.count button {
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 5px hsl(0, 0%, 65%);
+  cursor: pointer;
+  padding: 0.35em 0.5em;
+  border-radius: 6px;
+}
+.count h3 {
+  color: black;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.delete {
+  width: 100%;
+  padding: 0.3em 0;
+  margin-top: 0;
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: hsl(5, 97%, 28%);
+  border-radius: 3px;
+  border: 1px solid hsl(5, 97%, 38%);
+  color: hsl(5, 97%, 96%);
+  cursor: pointer;
+}
+.delete svg {
+  margin-left: 8px;
+}
+.btn-sec {
+  width: 100%;
+  padding: 0.5em 0;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: hsl(0, 99%, 99%);
+  border-radius: 3px;
+  border: 1px solid hsl(5, 97%, 38%);
+  color: hsl(5, 97%, 9%);
+  cursor: pointer;
+}
+.prices {
+  display: flex;
+  gap: 1em;
+  height: 50px;
+  align-items: center;
+}
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(0, 100%, 20%);
+}
+.og-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: grey;
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 768px) {
+  .responsive {
+    display: flex;
+    gap: 2em;
+  }
+  .delete {
+    align-self: center;
+    font-size: 1.25rem;
+    padding: 0.25em 0.85em;
+    margin-top: 10px;
+    background-color: var(--primary-100);
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .delete {
+    font-size: 1rem;
+    padding: 0.25em 0.6em;
+  }
+  .count {
+    margin-bottom: 5px;
+  }
+  .count button,
+  .count h3 {
+    padding: 0.2em 0.55em;
+    font-size: 1rem;
+  }
+  .thumbnail {
+    flex-shrink: 0;
+    flex-basis: 100px;
+  }
+  .details {
+    flex-shrink: 0.5;
+  }
+  .responsive {
+    display: inline;
+  }
+}

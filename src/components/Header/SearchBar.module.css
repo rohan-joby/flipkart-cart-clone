@@ -1,0 +1,15 @@
+.search {
+  height: 2.1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(0, 1%, 94%);
+  padding: 5px 10px;
+  font-size: 1.05rem;
+  padding: 5px 1rem;
+  width: 70vw;
+}
+.search:focus,
+.search:hover {
+  outline: 1px solid hsl(0, 1%, 84%);
+}

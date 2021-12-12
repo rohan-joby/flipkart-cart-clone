@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 2em;
+}
+.shop {
+  margin: 10vh auto;
+  display: block;
+  text-align: center;
+}
+.shop h2 {
+  padding: 0.5em 1em;
+  margin-bottom: 10px;
+}
+.shop a {
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  padding: 0.3em 0.6em;
+  color: hsl(197, 37%, 98%);
+  background-color: hsl(197, 37%, 54%);
+  border: 1px solid hsl(197, 37%, 74%);
+  border-radius: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  text-decoration: none;
+}
+.shop a:hover {
+  background-color: hsl(197, 37%, 44%);
+}
+
+.summary h2 {
+  margin-left: 35px;
+  font-family: sans-serif;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+  font-size: 1rem;
+}
+.actions a,
+.actions button {
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.4em 0.5em;
+  border-radius: 5px;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+.actions a {
+  color: hsl(27, 87%, 97%);
+  background-color: hsl(27, 87%, 57%);
+  border: 1px solid hsl(27, 87%, 77%);
+  font-family: sans-serif;
+}
+
+.actions button {
+  color: hsl(27, 87%, 27%);
+  background-color: #fff;
+  border: 1px solid hsl(27, 87%, 47%);
+}
