@@ -2,20 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { formatPrice } from "../../lib/helper";
 import { useCart } from "../../store/cartProvider";
-import { useSave } from "../../store/saveProvider";
 import classes from "./ProductItem.module.css";
 
 const ProductItem = ({ data }) => {
   const navigate = useNavigate();
   const priceFormatted = formatPrice(data.price);
   const [inCart, setinCart] = useState(false);
-  const [inSave, setInSave] = useState(false);
 
   const discount = data.discount;
   const discountPrice = formatPrice((data.price * (100 - discount)) / 100);
 
   const { addToCart, cartItems } = useCart();
-  const { savedItems, addToSave } = useSave();
+
 
   useEffect(() => {
     const cartIndex =
@@ -24,26 +22,7 @@ const ProductItem = ({ data }) => {
     setinCart(isInCart);
   }, [data.id, cartItems]);
 
-  useEffect(() => {
-    const savedIndex =
-      savedItems &&
-      savedItems.findIndex((savedItem) => savedItem.id === data.id);
-    const isInSave = savedIndex === -1 ? false : true;
-    setInSave(isInSave);
-  }, [savedItems, data.id]);
 
-  const saveHandler = () => {
-    const productData = {
-      id: data.id,
-      name: data.title,
-      company: data.brand,
-      image: data.image,
-      price: data.price,
-      discount: data.discount,
-      amount: 1,
-    };
-    addToSave(productData);
-  };
 
   const addToCartHandler = () => {
     const productData = {
@@ -90,13 +69,6 @@ const ProductItem = ({ data }) => {
           onClick={inCart ? goToCartHandler : addToCartHandler}
         >
           {inCart ? `Go to Cart` : `Add to Cart`}
-        </button>
-        <button
-          type="button"
-          className={`${classes.btn} ${classes[`btn-secondary`]}`}
-          onClick={inSave ? saveHandler : ""}
-        >
-          {inSave ? `Saved` : `Save for later`}
         </button>
       </div>
     </div>

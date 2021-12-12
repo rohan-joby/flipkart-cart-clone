@@ -26,7 +26,7 @@ const SavedItemRow = ({item}) => {
         className={classes.thumbnail}
       />
       <div className={classes.details}>
-        <h2>{item.name}</h2>
+        <h2>{item.name.slice(0,15)}...</h2>
         <h3>{item.company}</h3>
         <div className={classes.prices}>
           <h2 className={classes.price}>{discountPrice}</h2>
